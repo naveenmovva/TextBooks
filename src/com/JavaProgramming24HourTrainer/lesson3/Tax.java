@@ -5,7 +5,14 @@ public class Tax {
 	String state;
 	int dependents;
 	public double calculateTax(){
-		return 234.95;
+		double stateTax;
+		if (grossIncome<30000) {
+			stateTax=grossIncome*0.05;
+		}
+		else {
+			stateTax=grossIncome*0.06;
+		}
+		return stateTax;
 	}
 	public static void main(String [] args) {
 		System.out.println("testing");
